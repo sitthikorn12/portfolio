@@ -29,7 +29,7 @@
 .contact__card-icon {
     font-size: 2rem;
     color: var(--title-color);
-    margin: var(mb-0-25);
+    margin: var(--mb-0-25);
 }
 
 .contact__card-title,
@@ -46,6 +46,7 @@
     margin-bottom: var(--mb-0-75);
 }
 
+.contact__button,
 .contact__card-button {
     color: var(--text-color);
     font-size: var(--small-font-size);
@@ -60,10 +61,15 @@
     transition: 0.3s;
 }
 
-.contact__card-button:hover .contact__card-button-icon {
+.contact__card-button:hover 
+.contact__card-button-icon {
     transform: translate(0.25rem);
 }
 
+.contact__button:hover,
+.contact__card-button:hover {
+    color: var(--title-color); 
+}
 
 .contact__form {
     width: 360px;
