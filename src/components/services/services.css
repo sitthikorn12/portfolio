@@ -25,7 +25,7 @@
 }
 
 .services__button {
-    color: var(--title-color);
+    color: #ffffff;;
     font-size: var(--small-font-size);
     display: inline-flex;
     align-items: center;

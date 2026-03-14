@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import toast, { Toaster } from 'react-hot-toast';
 import "./contact.css";
 
 const Contact = () => {
@@ -8,11 +9,22 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+  const toastId = toast.loading('Sending message...');
+
     emailjs
       .sendForm('service_76rii5d', 'template_h54wnl9', form.current, {
         publicKey: 'CGB-7RK-yP1xS0Fzk',
       })
-      e.target.reset()
+      .then(
+        (result) => {
+        toast.success('Message sent successfully!', { id: toastId });
+          e.target.reset();
+        },
+        (error) => {
+          toast.error('Failed to send message. Please try again.', { id: toastId });
+          console.log(error.text);
+        }
+      )
   };
   return (
     <section className="contact section" id="contact">
@@ -101,6 +113,7 @@ const Contact = () => {
                 </form>
             </div>
         </div>
+        <Toaster position="top-right" reverseOrder={false} />
     </section>
   )
 }

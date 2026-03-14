@@ -99,10 +99,10 @@ const Qualification = () => {
                         <div>
                         <h3 className="qualification__title">Internship</h3>
                             <span 
-                            className="qualification__subtitle">Microsoft - Spain</span>
+                            className="qualification__subtitle">CPRAM Chonburi co.ltd</span>
                             <div className="qualification__calendar">
                                 <i className="uil uil-calendar-alt"></
-                                i> 2021-Present
+                                i> 2023
                             </div>
                         </div>
 
@@ -124,10 +124,10 @@ const Qualification = () => {
                         <div>
                         <h3 className="qualification__title">Internship</h3>
                             <span 
-                            className="qualification__subtitle">Apple Inc - Spain</span>
+                            className="qualification__subtitle">Advice Khukhan co. ltd</span>
                             <div className="qualification__calendar">
                                 <i className="uil uil-calendar-alt"></
-                                i> 2020 - 2021
+                                i> 2019 - 2020
                             </div>
                         </div>
                     </div>

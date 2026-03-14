@@ -1,4 +1,5 @@
 import React from 'react'
+import Typewriter from 'typewriter-effect'
 
 
 const Data = () => {
@@ -56,8 +57,21 @@ const Data = () => {
                   ></path>
             </svg>
         </h1>
-        <h3 className="home__subtitle">Visual Designer</h3>
-        <p className="home__description">I'm creative designer based in New York, and I'm very passionate and dedicated to my work.</p>
+        <h3 className="home__subtitle">
+          <Typewriter
+          options={{
+            strings: [
+              'Computer Engineering Student',
+              'Frontend Developer',
+            ], // ใส่ข้อความที่อยากให้สลับกันพิมพ์ตรงนี้
+            autoStart: true,
+            loop: true, // ให้วนลูปไปเรื่อยๆ
+            delay: 50, // ความเร็วในการพิมพ์
+            deleteSpeed: 30, // ความเร็วตอนลบ
+          }}
+          />
+        </h3>
+        <p className="home__description">"A passionate Computer Engineering student at KMUTNB. I specialize in building interactive web applications, blending creative design with clean, efficient code."</p>
         <a href="#contact" className="button button--flex">
             Say Hello
             <svg

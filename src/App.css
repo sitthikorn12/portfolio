@@ -5,15 +5,12 @@
 :root {
   --header-height: 3rem;
 
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --hue: 0;
-  --sat: 0%;
-  --title-color: hsl(var(--hue), var(--sat), 20%);
-  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
-  --text-color: hsl(var(--hue), var(--sat), 46%);
-  --body-color: hsl(var(--hue), var(--sat), 98%);
-  --container-color: #fff;
+  /*========== Colors (Nordic Night) ==========*/
+  --title-color: #38bdf8;      /* สีฟ้าสว่าง (Neon Cyan ใช้เน้นจุดสำคัญ) */
+  --title-color-dark: #0284c7; /* สีฟ้าที่เข้มขึ้นตอนเอาเมาส์ชี้ */
+  --text-color: #cbd5e1;       /* สีข้อความ (เทาสว่าง ให้อ่านง่ายบนพื้นมืด) */
+  --body-color: #0f172a;       /* สีพื้นหลัง (กรมท่าเข้มจัด) */
+  --container-color: #1e293b;  /* สีกล่องการ์ด (สว่างกว่าพื้นหลังนิดนึง) */
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
@@ -48,6 +45,29 @@
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
+}
+
+/* =============== 👋 แอนิเมชันโบกมือ (Waving Hand) =============== */
+
+@keyframes waving-hand {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* โบกขวา */
+   20% { transform: rotate(-8.0deg) }  /* โบกซ้าย */
+   30% { transform: rotate(14.0deg) }  /* โบกขวา */
+   40% { transform: rotate(-4.0deg) }  /* กลับมาตรงกลางนิดนึง */
+   50% { transform: rotate(10.0deg) }  /* กลับมาตรงกลางอีกที */
+   60% { transform: rotate( 0.0deg) }  /* นิ่ง */
+  100% { transform: rotate( 0.0deg) }  /* นิ่งยาวๆ */
+}
+
+/* เรียกใช้แอนิเมชันที่คลาสของ SVG ตรงๆ เลย */
+.home__hand {
+  animation-name: waving-hand;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  
+  /* ปรับจุดหมุนให้อยู่บริเวณข้อมือของ SVG */
+  transform-origin: 75% 85%; 
 }
 
 /* Responsive typography */

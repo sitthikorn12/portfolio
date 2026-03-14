@@ -87,13 +87,22 @@
     left: 0;
     width: 100%;
     height: 100%;
-    border: 2px solid rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3); 
     background: none;
-    color: var(--text-color);
+    color: #ffffff; 
     outline: none;
     border-radius: 0.75rem;
     padding: 1.5rem;
     z-index: 1;
+    transition: 0.3s; /* เพิ่มความสมูทตอนคลิก */
+}
+
+.contact__form-input::placeholder {
+    color: #94a3b8; /* สีเทาสว่างๆ สบายตา */
+}
+
+.contact__form-input:focus {
+    border-color: var(--title-color);
 }
 
 .contact__form-tag {
