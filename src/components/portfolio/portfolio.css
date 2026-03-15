@@ -1,39 +1,64 @@
 /* ========================================= */
-/* ✨ โค้ดจัดหน้าตาแบบ Responsive (ธีม Nordic Night) */
+/* ✨ โค้ดจัดหน้าตาแบบปกติ (หน้าจอคอมพิวเตอร์) */
 /* ========================================= */
 
-/* บังคับให้กล่องบนจอคอม เรียงซ้าย (1.7 ส่วน) - ขวา (1 ส่วน) */
 .transcript__dashboard {
   display: grid;
-  grid-template-columns: 1.7fr 1fr;
+  grid-template-columns: 1.7fr 1fr; /* กราฟใหญ่กว่าสถิติ */
   gap: 24px;
   margin-top: 40px;
   align-items: stretch;
 }
 
-/* จัดกล่องรายวิชาแนวนอน */
 .transcript__course-item {
   display: grid;
-  grid-template-columns: 140px 1fr 80px 80px;
-  background: var(--container-color); /* สีกล่องให้เข้ากับหน้าอื่น */
+  grid-template-columns: 140px 1fr 80px 80px; /* แบ่งช่องตารางวิชา */
+  background: #0f0f0f;
   padding: 16px;
-  border-radius: 1rem;
+  border-radius: 12px;
+  border: 1px solid #222;
   margin-bottom: 10px;
   align-items: center;
 }
 
-/* ========================================= */
-/* 📱 ดักจับหน้าจอมือถือ (ย่อจอแล้วค่อยตกลงมา) */
-/* ========================================= */
-@media screen and (max-width: 768px) {
+/*=============== BREAKPOINTS ===============*/
+
+/* 💻 For large devices (Tablet แนวนอน / จอคอมเล็ก) */
+@media screen and (max-width: 992px) {
   .transcript__dashboard {
-    grid-template-columns: 1fr; 
+    gap: 1.5rem; /* ลดช่องว่างระหว่างกล่องกราฟและสถิติลงนิดนึง */
   }
 
   .transcript__course-item {
-    grid-template-columns: 1fr; 
-    text-align: center;         
+    /* บีบช่องรหัสวิชาและหน่วยกิตให้แคบลง เพื่อให้ชื่อวิชาไม่ตกบรรทัด */
+    grid-template-columns: 100px 1fr 60px 60px; 
+    padding: 12px 16px;
+  }
+}
+
+/* 📱 For medium devices (Tablet แนวตั้ง / มือถือทั่วไป) */
+@media screen and (max-width: 768px) {
+  .transcript__dashboard {
+    grid-template-columns: 1fr; /* บังคับให้กล่องกราฟและสถิติตกลงมาเรียงแนวตั้ง */
+    gap: 1.5rem;
+  }
+
+  .transcript__course-item {
+    grid-template-columns: 1fr; /* บังคับให้ข้อมูลวิชาตกลงมาเรียงแนวตั้ง 1 แถว */
+    text-align: center;         /* จัดให้อยู่ตรงกลางให้อ่านง่าย */
     gap: 10px;                  
     padding: 18px 12px;
+  }
+}
+
+/* 📱 For small devices (มือถือจอเล็กมาก เช่น iPhone SE) */
+@media screen and (max-width: 350px) {
+  .transcript__dashboard {
+    margin-top: 20px; /* ลดระยะห่างด้านบนลง เพื่อประหยัดพื้นที่ */
+  }
+
+  .transcript__course-item {
+    padding: 16px 8px; /* ลด padding ด้านข้างลง เพื่อไม่ให้กล่องล้นขอบจอ */
+    border-radius: 10px;
   }
 }
