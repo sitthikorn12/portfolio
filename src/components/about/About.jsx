@@ -1,6 +1,6 @@
 import React from 'react';
 import "./about.css";
-import AboutImg from "../../assets/IMG_1.JPG";
+import AboutImg from "../../assets/IMG_1603.jpg";
 import CV from "../../assets/Sitthikorn-Resume.pdf";
 import Info from "./Info";
 
@@ -20,7 +20,8 @@ const About = () => {
           "I'm a dedicated Computer Engineering student at KMUTNB, highly passionate about creating interactive web applications. I focus on writing efficient code, designing clean user interfaces, and taking on new challenges to grow as a software engineer."
           </p>
 
-          <a download="Sitthikorn-Resume.pdf" href={CV} className="button button--flex">
+          <div className="about__buttons">
+          <a download="Sitthikorn-Resume.pdf" href={CV} className="button button--flex" >
             Download Resume
             <svg
                 class="button__icon"
@@ -48,6 +49,8 @@ const About = () => {
                 ></path>
             </svg>
           </a>
+          </div>
+
         </div>
       </div>
     </section>

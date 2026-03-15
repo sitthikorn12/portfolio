@@ -1,36 +1,36 @@
-import React from 'react'
-import "./App.css";
+import React from 'react';
+// 1. Import เครื่องมือสำหรับทำ Router
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
+
 import Header from './components/header/Header';
 import Home from './components/home/Home';
 import About from './components/about/About';
 import Skills from './components/Skills/Skills';
-import Services from './components/services/Services';
-import Qualification from './components/qualification/Qualification';
-import Work from './components/work/Work';
+import Portfolio from './components/portfolio/Portfolio';
 import Contact from './components/contact/Contact';
-import Footer from './components/footer/Footer';
-import ScrollUp from './components/scrollup/ScrollUp';
+import Services from './components/services/Services'
+import './App.css';
 
 const App = () => {
   return (
-    <>
-      <Header/>
-    
-    <main className='main'>
-      <Home/>
-      <About/>
-      <Skills/>
-      <Services/>
-      <Qualification/>
-      <Work/>
-      
-      <Contact/>
-    </main>
+    // 2. เอา BrowserRouter ครอบทั้งแอป
+    <BrowserRouter>
+      {/* Header จะแสดงอยู่ทุกหน้า ไม่หายไปไหน */}
+      <Header /> 
 
-      <Footer/>
-      <ScrollUp/>
-    </>
-  )
+      <main className="main">
+        {/* 3. ใช้ Routes เพื่อสลับหน้าตาม URL */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

@@ -72,7 +72,7 @@ const Data = () => {
           />
         </h3>
         <p className="home__description">"A passionate Computer Engineering student at KMUTNB. I specialize in building interactive web applications, blending creative design with clean, efficient code."</p>
-        <a href="#contact" className="button button--flex">
+        <a href="/contact" className="button button--flex">
             Say Hello
             <svg
                   class="button__icon"

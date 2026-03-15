@@ -15,7 +15,13 @@
     column-gap: 1rem;
 }
 
-.nav__logo,
+.nav__logo {
+    color: #ffffff;
+    font-weight: 700; /* ทำให้ตัวหนาขึ้น */
+    font-size: 1.5rem; /* ✨ ปรับความใหญ่ของโลโก้ตรงนี้ (ลอง 1.5rem หรือ 1.8rem) */
+    letter-spacing: 1px; /* เพิ่มช่องไฟนิดนึงให้ดูเท่ขึ้น */
+}
+
 .nav__toggle {
     color: #ffffff;
     font-weight: var(--font-medium);

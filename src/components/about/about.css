@@ -44,6 +44,14 @@
     margin-bottom: var(--mb-2-5);
 }
 
+.about__buttons {
+    display: flex;
+    flex-direction: row; /* ✨ เปลี่ยนเป็น row ให้ปุ่มเรียงแนวนอน */
+    flex-wrap: wrap;     /* ✨ ถ้าจอมือถือแคบ ให้ปุ่มตกลงมาบรรทัดใหม่เอง */
+    gap: 1rem;           /* ระยะห่างระหว่างปุ่ม */
+    margin-top: -1rem;   /* ระยะดึงขึ้น (ปรับเลขตัวนี้ตามความชอบได้เลย) */
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 992px) {
